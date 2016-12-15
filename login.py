@@ -6,8 +6,8 @@ data = {
     "ln": "zh_TW",
     "embed": "No",
     "logintype": "logineb",
-    "username": "403411431",
-    "password": "281452",
+    "username": "<學號>",
+    "password": "<密碼>",
     "loginbtn": "登入"
 }
 s = requests.session()
