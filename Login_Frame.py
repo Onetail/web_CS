@@ -1,18 +1,20 @@
-from PyQt5.QtWidgets import QApplication,QWidget,QLabel,QLineEdit,QHBoxLayout,QPushButton,QVBoxLayout
+from PyQt5.QtWidgets import *
 import Beautiful_FCS as FCS
 import re
 
-class Application(QWidget):
-	def __init__(self):
-		super().__init__()
-		self.FrameUi()
 
-	def FrameUi(self):
+class Application(QWidget):
+	
+	def __init__(self, parent = None):
+		super(Application, self).__init__(parent)
+		self.frame_ui()
+
+	def frame_ui(self):
 		self.resize(500,250)
 
-		# label 
-		account = QLabel("學號",self)
-		passwd = QLabel("密碼",self)
+		# label
+		account = QLabel("學號", self)
+		passwd = QLabel("密碼", self)
 
 		account.setFont(FCS.Font_list[2])
 		passwd.setFont(FCS.Font_list[2])
@@ -23,7 +25,7 @@ class Application(QWidget):
 		self.pw_line.setFont(FCS.Font_list[2])
 
 		# button
-		login_btn = QPushButton("登入",self)
+		login_btn = QPushButton("登入", self)
 		login_btn.clicked.connect(self.login_check)
 
 		# layout
@@ -32,11 +34,13 @@ class Application(QWidget):
 		ac_layout.addWidget(account)
 		ac_layout.addWidget(self.ac_line)
 		ac_layout.addStretch(1)
+		
 		pw_layout = QHBoxLayout()
 		pw_layout.addStretch(1)
 		pw_layout.addWidget(passwd)
 		pw_layout.addWidget(self.pw_line)
 		pw_layout.addStretch(1)
+		
 		bottomlayout = QHBoxLayout()
 		bottomlayout.addStretch(1)
 		bottomlayout.addWidget(login_btn)
@@ -48,7 +52,6 @@ class Application(QWidget):
 		mainlayout.addLayout(bottomlayout)
 
 		self.setLayout(mainlayout)
-
 		self.setWindowTitle("Login")
 		self.show()
 
@@ -56,8 +59,10 @@ class Application(QWidget):
 		try:
 			if re.search("^[\x30-\x39]{8,}$",self.ac_line.text()) != None :
 				if re.search(r"^[\s\S]{6,}$",self.pw_line.text()) != None :
-					self.setWindowTitle("學號: "self.ac_line.text()+" 密碼: "+self.pw_line.text())
-				else:	self.setWindowTitle("密碼錯誤!")
-			else:	self.setWindowTitle("帳號錯誤!")
+					self.setWindowTitle("學號: "+self.ac_line.text()+" 密碼: "+self.pw_line.text())
+				else:
+					self.setWindowTitle("密碼錯誤!")
+			else:
+				self.setWindowTitle("帳號錯誤!")
 		except:
 			print("\nerror")
