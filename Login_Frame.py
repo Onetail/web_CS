@@ -8,6 +8,7 @@ class Application(QWidget):
 	def __init__(self, parent = None):
 		super(Application, self).__init__(parent)
 		self.frame_ui()
+		self.save()
 
 	def frame_ui(self):
 		self.resize(500,250)
@@ -66,3 +67,7 @@ class Application(QWidget):
 				self.setWindowTitle("帳號錯誤!")
 		except:
 			print("\nerror")
+			
+	def save(self):
+		return self.ac_line.text(), self.pw_line.text()
+	
