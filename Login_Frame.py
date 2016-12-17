@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import *
 import Beautiful_FCS as FCS
 import re
+import Student_Dt_frame as sdf  # change application
 
 
 class Application(QWidget):
@@ -24,6 +25,7 @@ class Application(QWidget):
 		self.pw_line = QLineEdit()
 		self.ac_line.setFont(FCS.Font_list[2])
 		self.pw_line.setFont(FCS.Font_list[2])
+		self.pw_line.setEchoMode(QLineEdit.Password)
 
 		# button
 		login_btn = QPushButton("登入", self)
@@ -57,14 +59,24 @@ class Application(QWidget):
 		self.show()
 
 	def login_check(self):
+		# check account & passwd
 		try:
 			if re.search("^[\x30-\x39]{8,}$",self.ac_line.text()) != None :
 				if re.search(r"^[\s\S]{6,}$",self.pw_line.text()) != None :
 					self.setWindowTitle("學號: "+self.ac_line.text()+" 密碼: "+self.pw_line.text())
+					
+					# new Application
+					self.ui = sdf.Application()
+					self.hide()
+					self.close_signal.emit()
+					self.close()
+					self.ui.show()
 				else:
+					self.pw_line.setText("")
 					self.setWindowTitle("密碼錯誤!")
 			else:
 				self.setWindowTitle("帳號錯誤!")
+				self.ac_line.setText("")
 		except:
 			print("\nerror")
 			

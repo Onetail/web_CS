@@ -1,76 +1,95 @@
+ï»¿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<!-- Copyright (C) 2000 Tivoli Systems, Inc. -->
+<!-- Copyright (C) 1999 IBM Corporation -->
+<!-- Copyright (C) 1998 Dascom, Inc. -->
+<!-- All Rights Reserved. -->
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>Access Manager for e-business ç»å¥</TITLE>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+// The folloring code is come from http://jstricks.com/detect-mobile-devices-javascript-jquery/
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-	<head>
-		<title>TMWS030</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=big5" />
-		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
-		<meta content="Visual Basic .NET 7.1" name="CODE_LANGUAGE">
-		<meta content="JavaScript" name="vs_defaultClientScript">
-		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
-		<script language="javascript" src="http://Gaiji.emis.tku.edu.tw/wfs/js/lib/wfs.js"></script>
-	</HEAD>
-	<body background="./image/BG0001.jpg">
-		<form name="Form1" method="post" action="TMWS030.aspx" id="Form1">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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huS5i+S4gCjnibnmrornlJ/kuInliIbkuYvkuowp5LiU6YCj57qM5LqM5qyh6ICFKOS8keWtuOWJjeW+jOWtuOacn+imluWQjOmAo+e6jCnvvIzmh4nku6TpgIDlrbjjgIIo5a245qWt5oiQ57i+6YCA5a2455u46Zec6KaP5a6a77yM6KuL6Kmz5a245YmH56ys5LqU56ugKTwvZm9udD48L3RkPjwvdHI+PHRyPjx0ZD4mbmJzcDs8L3RkPjx0ZCB2YWxpZ249InRvcCI+PGZvbnQgc2l6ZT0iMiIgY29sb3I9ImJsdWUiPjIuPC9mb250PjwvdGQ+PHRkPjxmb250IHNpemU9IjIiIGNvbG9yPSJyZWQiPuWkluiqnuiDveWKm+aqouWumuabv+S7o+iqsueoiyjlpoLpgLLkv67oi7HmlofjgIHpgLLkv67ml6Xoqp7nrYkp44CB56S+5ZyY5a2457+S6IiH5a+m5L2c6Kqy56iL44CB5qau6K295a2456iL6Kqy56iL562J77yM5a245YiGPGI+5LiN5YiX5YWlPC9iPueVtuWtuOacn+WtuOalreaIkOe4vuS6jOWIhuS5i+S4gOaIluS4ieWIhuS5i+S6jOWtuOWIhuS4jeWPiuagvOioiOeul+OAkOWIhuavjSjkv67nv5LlrbjliIbnuL3mlbgp44CB5YiG5a2QKOS4jeWPiuagvOWtuOWIhuaVuCnnmobkuI3mjqHoqIjoqbLnp5HlrbjliIbjgJHjgII8L2ZvbnQ+PC90ZD48L3RyPjx0cj48dGQ+Jm5ic3A7PC90ZD48dGQgdmFsaWduPSJ0b3AiPjxmb250IHNpemU9IjIiIGNvbG9yPSJibHVlIj4zLjwvZm9udD48L3RkPjx0ZD48Zm9udCBzaXplPSIyIiBjb2xvcj0iYmx1ZSI+5aSW6Kqe6IO95Yqb5qqi5a6a5pu/5Luj6Kqy56iLKOWmgumAsuS/ruiLseaWh+OAgemAsuS/ruaXpeiqnuetiSnjgIHnpL7lnJjlrbjnv5LoiIflr6bkvZzoqrLnqIvvvIzlhbbmiJDnuL7kuI3liJflhaXlubPlnYfoqIjnrpfjgII8L2ZvbnQ+PC90ZD48L3RyPjx0cj48dGQ+Jm5ic3A7PC90ZD48dGQgdmFsaWduPSJ0b3AiPjxmb250IHNpemU9IjIiIGNvbG9yPSJibHVlIj40LjwvZm9udD48L3RkPjx0ZD48Zm9udCBzaXplPSIyIiBjb2xvcj0iYmx1ZSI+5aSW6Kqe6IO95Yqb5qqi5a6a5pu/5Luj6Kqy56iLKOWmgumAsuS/ruiLseaWh+OAgemAsuS/ruaXpeiqnuetiSnjgIHpgYvli5XkvJHplpLoiIfnq7bmioDlr6bli5njgIHlpKflm5vpq5TogrLpgbjkv67oqrLnqIsoMTAy5a245bm05bqm6LW35YGc6ZaLKeOAgeWkp+S6jOWFqOawkeWci+mYsuaVmeiCsui7jeS6i+iok+e3tOOAgeWkp+S6jOi7jeiokygxMDHlrbjlubTluqbnrKwy5a245pyf6LW35YGc6ZaLKeOAgeaVmeiCsuWtuOeoi+OAgei8lOezu+OAgembmeS4u+S/ruetieiqsueoi+WPiumHjeikh+S/rue/kuenkeebruetie+8jOWFtuWtuOWIhuS4jeWIl+WFpeeVoualreWtuOWIhuioiOeul+OAgijlj6blkITns7vkuI3mib/oqo3ngrrnlaLmpa3lrbjliIbkuYvnp5Hnm67oq4voh6rooYzmtL3oqaLlkITns7sp44CCPC9mb250PjwvdGQ+PC90cj48dHI+PHRkPiZuYnNwOzwvdGQ+PHRkIHZhbGlnbj0idG9wIj48Zm9udCBzaXplPSIyIiBjb2xvcj0iYmx1ZSI+NS48L2ZvbnQ+PC90ZD48dGQ+PGZvbnQgc2l6ZT0iMiIgY29sb3I9ImJsdWUiPueVmeWtuOiLseiqnuacg+ipsShGMDE1NynliJflhaXml6XplpPpg6jlkITlrbjns7vmnKzns7vpgbjkv67lrbjliIbmlbjoqIjnrpfjgII8L3RkPjwvdHI+PHRyPjx0ZD4mbmJzcDs8L3RkPjx0ZCB2YWxpZ249InRvcCI+PGZvbnQgc2l6ZT0iMiIgY29sb3I9ImJsdWUiPjYuPC9mb250PjwvdGQ+PHRkPjxmb250IHNpemU9IjIiIGNvbG9yPSJyZWQiPue0r+ioiOWvpuW+l+WtuOWIhu+8jOS4jeetieaWvOWvpumam+e0r+ioiOeVoualreWtuOWIhuOAgjwvZm9udD48Zm9udCBzaXplPSIyIiBjb2xvcj0iYmx1ZSI+KOeVoualreenkeebruWtuOWIhuetieebuOmXnOimj+Wumuiri+a0veipouWQhOezu+aIluiou+WGiue1hFEmQee2suermeaIluiou+WGiue1hOaIkOe4vualreWLmeeql+WPoyk8L2ZvbnQ+PC90ZD48L3RyPjx0cj48dGQ+Jm5ic3A7PC90ZD48dGQgdmFsaWduPSJ0b3AiPjxmb250IHNpemU9IjIiIGNvbG9yPSJibHVlIj43LjwvZm9udD48L3RkPjx0ZD48Zm9udCBzaXplPSIyIiBjb2xvcj0iYmx1ZSI+5pys57ay56uZ5oiQ57i+6LOH6KiK5YOF5L6b5Y+D6ICD77yM6KuL5Lul5pWZ5YuZ6JmV5q2j5byP5oiQ57i+5Zau54K65rqW44CCPC9mb250PjwvdGQ+PC90cj48L3RhYmxlPjwvY2VudGVyPmRkAhsPDxYCHgtOYXZpZ2F0ZVVybAUMVE1XMDA0MC5hc3B4ZGRkciJoq0IbdO7olQGe20H8RZWKxZ8=" />
+function redirectLoginPage()
+{
+    var redirUrl = window.location.href ;
 
-<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="60E2E934" />
-			<font face="新細明體">
-				<P align="center"><font face="新細明體" color="#330099" size="+2">查詢學期及各科成績</font></P>
-				<P align="center">
-					<span id="Label6"><font color="Red">開放查詢之截止學年學期： 104 學年 第 7 學期</font></span>
-				</P>
-            <P align="center">
-					<span id="Label1">學號：</span>
-					<span id="Label2"><font color="Blue">403411431</font></span>
-					<span id="Label3">姓名：</span>
-					<span id="Label4"><font color="Blue">施佩妏   </font></span>
-				</P>
-				<HR></hr>
-			</font>
-				</P>
-                <table width="70%" align="center">
-                    <tr>
-                        <td align="right"><span id="Label5"><font color="Red">共 4 筆資料</font></span></td>
-                    </tr>
-                </table>
-				    
-				<font face="新細明體"></font>
-				<table cellspacing="0" align="Center" rules="all" bordercolor="#000099" border="1" id="DataGrid2" width="70%">
-	<tr align="center">
-		<td><font color="Blue">學年</font></td><td><font color="Blue">學期</font></td><td><font color="Blue">所系年班</font></td><td><font color="Blue">操行成績</font></td><td><font color="Blue">總修學分</font></td><td><font color="Blue">實得學分</font></td><td><font color="Blue">累計實得<font size=2 color=red>(備註6)</font></font></td><td><font color="Blue">學期學業平均</font></td><td><font color="Blue">修業狀況</font></td><td><font color="Blue">各科成績</font></td>
-	</tr><tr align="center">
-		<td>103</td><td>一</td><td>資工一Ｂ</td><td>84.00</td><td>18</td><td>18</td><td>18</td><td>76.59</td><td>&nbsp;</td><td><a href="TMWS030_result.aspx?yr=103&sem=1&Quar=0">明細</a></td>
-	</tr><tr align="center">
-		<td>103</td><td>二</td><td>&nbsp;</td><td>84.00</td><td>18</td><td>17</td><td>35</td><td>85.65</td><td>&nbsp;</td><td><a href="TMWS030_result.aspx?yr=103&sem=2&Quar=0">明細</a></td>
-	</tr><tr align="center">
-		<td>104</td><td>一</td><td>資工二Ｂ</td><td>84.00</td><td>19</td><td>19</td><td>54</td><td>82.74</td><td>&nbsp;</td><td><a href="TMWS030_result.aspx?yr=104&sem=1&Quar=0">明細</a></td>
-	</tr><tr align="center">
-		<td>104</td><td>二</td><td>&nbsp;</td><td>84.00</td><td>22</td><td>22</td><td>76</td><td>84.14</td><td>&nbsp;</td><td><a href="TMWS030_result.aspx?yr=104&sem=2&Quar=0">明細</a></td>
-	</tr>
-</table>
-    			<table width="90%" align="center">
-    			    <tr>
-    			        <td align="center">
-                            <br />
-                            <span id="Label8"><font color="Red"><table width="400" border="1" style="border-collapse:collapse;" borderColor="#000099"><tr><td width="200" align="center"><font color="blue">學業總平均</font></td><td width="200" align="center"><font color="blue">GPA</font></td></tr><tr><td align="center">82.41</td><td align="center">3.586</td></tr></table></font></span></td>
-    			    </tr>
-    			    <tr>
-    			        <td align="right"><span id="Label7"><font color="Red"></font></span></td>
-    			    </tr>
-	    		</table>
-				
-				<br>
-			<P align="center">
-				</P>
+    redirUrl = redirUrl.replace(/:\/\/portal.tku.edu.tw/i, "://sso.tku.edu.tw");
+    
+    if(isMobile.any())
+    	window.location.href="https://sso.tku.edu.tw/NEAI/loginrwd.jsp?myurl=" + redirUrl;
+    else
+	window.location.href="https://sso.tku.edu.tw/NEAI/logineb.jsp?myurl=" + redirUrl;
+}
+//-->
+</script>
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" onLoad="redirectLoginPage()">
+
+<BR>
 
 
-                <center>
-                    <span id="Label9"><center><table width="90%" align="center" ><tr><td valign="top" width="40"><font size="2" color="blue">備註：</font></td><td valign="top"><font size="2" color="blue">1.</font></td><td valign="top"><font size="2" color="blue">修讀學士學位學生，學期學業成績不及格科目之學分數，達該學期修習學分總數二分之一(特殊生三分之二)且連續二次者(休學前後學期視同連續)，應令退學。(學業成績退學相關規定，請詳學則第五章)</font></td></tr><tr><td>&nbsp;</td><td valign="top"><font size="2" color="blue">2.</font></td><td><font size="2" color="red">外語能力檢定替代課程(如進修英文、進修日語等)、社團學習與實作課程、榮譽學程課程等，學分<b>不列入</b>當學期學業成績二分之一或三分之二學分不及格計算【分母(修習學分總數)、分子(不及格學分數)皆不採計該科學分】。</font></td></tr><tr><td>&nbsp;</td><td valign="top"><font size="2" color="blue">3.</font></td><td><font size="2" color="blue">外語能力檢定替代課程(如進修英文、進修日語等)、社團學習與實作課程，其成績不列入平均計算。</font></td></tr><tr><td>&nbsp;</td><td valign="top"><font size="2" color="blue">4.</font></td><td><font size="2" color="blue">外語能力檢定替代課程(如進修英文、進修日語等)、運動休閒與競技實務、大四體育選修課程(102學年度起停開)、大二全民國防教育軍事訓練、大二軍訓(101學年度第2學期起停開)、教育學程、輔系、雙主修等課程及重複修習科目等，其學分不列入畢業學分計算。(另各系不承認為畢業學分之科目請自行洽詢各系)。</font></td></tr><tr><td>&nbsp;</td><td valign="top"><font size="2" color="blue">5.</font></td><td><font size="2" color="blue">留學英語會話(F0157)列入日間部各學系本系選修學分數計算。</td></tr><tr><td>&nbsp;</td><td valign="top"><font size="2" color="blue">6.</font></td><td><font size="2" color="red">累計實得學分，不等於實際累計畢業學分。</font><font size="2" color="blue">(畢業科目學分等相關規定請洽詢各系或註冊組Q&A網站或註冊組成績業務窗口)</font></td></tr><tr><td>&nbsp;</td><td valign="top"><font size="2" color="blue">7.</font></td><td><font size="2" color="blue">本網站成績資訊僅供參考，請以教務處正式成績單為準。</font></td></tr></table></center></span>
-                </center>
-			        <P align="center"><font face="新細明體" color="blue">|
-					<a id="HyperLink1" href="TMW0040.aspx">回功能選單</a>|
-					<a id="HyperLink2" href="TMW0000.aspx">回校務管理資訊系統主畫面</a>|</font></P>
-		</form>
-	</body>
-</html>
+<BR><BR>
+
+<!--- DO NOT TRANSLATE OR MODIFY any part of the hidden parameter(s) --->
+
+<!---
+  The following block of code provides users with a warning message
+  if they do not have cookies configured on their browsers.  
+  If this environment does not use cookies to maintain login sessions, 
+  simply remove or comment out the block below.
+--->
+
+
+<!--- BEGIN Cookie check block --->
+<!---
+DO NOT TRANSLATE anything inside the SCRIPT tag except the quoted 
+string warningString.  i.e. var warningString = "Translate this string";
+--->
+<SCRIPT LANGUAGE=JavaScript>
+    var warningString = "<B>è­¦åï¼</B>å¦æè¦ç¶­ææ¨çç»å¥éæ®µä½æ¥­ï¼è«ç¢ºå®æ¨ççè¦½å¨å·²ç¶éç½®æå¯ä»¥æ¥å Cookieã";
+    document.cookie = 'acceptsCookies=yes';
+    
+    if(document.cookie == ''){
+        document.write(warningString);
+    }
+    else{
+        document.cookie = 'acceptsCookies=yes; expires=Fri, 13-Apr-1970 00:00:00 GMT';
+    }
+</SCRIPT>
+<NOSCRIPT>
+<B>è­¦åï¼</B>å¦æè¦ç¶­ææ¨çç»å¥éæ®µä½æ¥­ï¼è«ç¢ºå®<BR>
+æ¨ççè¦½å¨å·²ç¶éç½®æå¯ä»¥æ¥å Cookieã
+</NOSCRIPT>
+<!--- END Cookie check block --->
+
+
+
+<BR>
+
+</BODY>
+</HTML>
+
